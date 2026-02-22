@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7º Simulado de Elite - Maratona Concursos</title>
+    <style>
+        body { background-color: #f3f4f6; margin: 0; padding: 20px; font-family: sans-serif; }
+        .main-container { max-width: 850px; margin: auto; background-color: #ffffff; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); overflow: hidden; border: 1px solid #e5e7eb; }
+        
+        .header { background-color: #1e3a8a; color: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 8px solid #1d4ed8; }
+        .header h1 { margin: 0; font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        .header p { margin: 10px 0 0; font-size: 18px; font-weight: 600; color: #bfdbfe; }
+
+        .content { padding: 30px; }
+        .question-card { background-color: #ffffff; border: 2px solid #f3f4f6; border-radius: 15px; padding: 25px; margin-bottom: 60px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        
+        /* Enunciado Literal - Peso 600 */
+        .question-text { color: #111827; font-size: 19px; font-weight: 600; line-height: 1.6; margin-bottom: 25px; text-align: left; }
+        
+        .options-container { display: flex; flex-direction: column; gap: 15px; }
+        
+        /* Alternativas - Peso 800 e Bordas Fortes 4px */
+        .option-btn { 
+            width: 100%; padding: 18px 25px; border-radius: 12px; border: 4px solid #334155; 
+            background-color: #ffffff; color: #1e293b; font-size: 17px; font-weight: 800; 
+            text-align: left; cursor: pointer; transition: all 0.1s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-transform: uppercase;
+        }
+        
+        .feedback { display: none; margin-top: 25px; padding: 20px; border-radius: 12px; border-left: 8px solid #1e3a8a; background-color: #eff6ff; font-size: 17px; font-weight: 600; line-height: 1.6; color: #1e293b; text-align: left; }
+        .feedback-title { color: #16a34a; display: block; margin-bottom: 8px; font-size: 18px; font-weight: 900; }
+
+        .sub-items { background-color: #f8fafc; padding: 15px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #e2e8f0; font-weight: 700; color: #334155; line-height: 1.8; text-align: left; }
+
+        .footer { background-color: #fbbf24; padding: 30px; text-align: center; border-top: 5px solid #d97706; }
+        .footer p { margin: 0; color: #000; font-weight: 900; font-size: 22px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="header">
+        <h1>7º SIMULADO DE ELITE - VIGIA</h1>
+        <p>Maratona Concursos - Treinamento de Alta Performance</p>
+    </div>
+
+    <div class="content">
+
+        <!-- QUESTÃO 01 -->
+        <div class="question-card">
+            <div class="question-text">Questão 01. Considere a situação hipotética a seguir: Durante uma inspeção de rotina em uma repartição pública, o guarda patrimonial observa que há produtos de limpeza armazenados em local inadequado, próximo a alimentos e materiais de escritório. Considerando as normas de higiene e segurança, a conduta mais apropriada é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">a) Ignorar a situação, pois não há risco imediato à saúde dos servidores.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">b) Registrar a ocorrência apenas se houver reclamação formal de algum servidor.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">c) Informar verbalmente ao responsável pela limpeza e aguardar providências.</button>
+                <button id="q1-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q1-fb').style.display='block';">d) Comunicar formalmente à chefia imediata e registrar em boletim a irregularidade observada.</button>
+            </div>
+            <div id="q1-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA D.</span> Irregularidades que podem comprometer a saúde e segurança devem ser registradas e comunicadas formalmente através dos canais hierárquicos.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 02 -->
+        <div class="question-card">
+            <div class="question-text">Questão 02. Em relação às técnicas de vigilância patrimonial, uma prática eficaz e alinhada às boas normas de segurança é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">a) Evitar registros escritos para não expor a rotina da vigilância.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">b) Priorizar áreas internas e deixar as externas sob responsabilidade da zeladoria.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">c) Utilizar câmeras como único recurso de vigilância, dispensando rondas presenciais.</button>
+                <button id="q2-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q2-fb').style.display='block';">d) Variar os horários e rotas de patrulhamento, mantendo registros detalhados das ocorrências.</button>
+            </div>
+            <div id="q2-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA D.</span> A quebra de padrão (variação de horários e rotas) é uma técnica fundamental para evitar que a vigilância seja monitorada e burlada.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 03 -->
+        <div class="question-card">
+            <div class="question-text">Questão 03. De acordo com a NBR 12693 (Sistemas de proteção por extintores de incêndio), os extintores cuja massa total seja superior a 20 kg são classificados como:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">a) Extintores portáteis.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">b) Extintores fixos.</button>
+                <button id="q3-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q3-fb').style.display='block';">c) Extintores sobre-rodas.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">d) Extintores estacionários.</button>
+            </div>
+            <div id="q3-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA C.</span> Equipamentos de combate a incêndio com massa superior a 20kg deixam de ser portáteis e passam a ser classificados como sobre-rodas (carretas).
+            </div>
+        </div>
+
+        <!-- QUESTÃO 04 -->
+        <div class="question-card">
+            <div class="question-text">Questão 04. Em uma fábrica de calçados, foi identificado um nível de ruído elevado em um setor específico. O gerente de segurança, imediatamente, comprou protetores auriculares para todos e considerou o problema resolvido. Segundo a hierarquia de medidas de prevenção citada no texto da NR 06, a atitude do gerente foi correta:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">a) Sim, pois o EPI é a primeira medida a ser adotada para garantir a proteção</button>
+                <button id="q4-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q4-fb').style.display='block';">b) Não, pois o EPI deve ser utilizado apenas em último caso</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">c) Sim, desde que o EPI possua Certificado de Aprovação (CA) válido.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">d) Não, pois não é necessário usar nenhuma medida de proteção individual nesse caso</button>
+            </div>
+            <div id="q4-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA B.</span> A legislação determina que o EPI seja a última opção, após esgotadas as medidas de proteção coletiva ou de engenharia na fonte.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 05 -->
+        <div class="question-card">
+            <div class="question-text">Questão 05. Toda matéria suscetível de queimar, como, por exemplo, substância que reage com o oxigênio liberando energia, usualmente de modo vigoroso, na forma de calor, chamas e gases. A definição acima refere-se a:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">a) Comburente.</button>
+                <button id="q5-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q5-fb').style.display='block';">b) Combustível.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">c) Calor.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">d) Reação em cadeia.</button>
+            </div>
+            <div id="q5-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA B.</span> Combustível é todo material que pode entrar em combustão (papel, madeira, gases inflamáveis, etc.).
+            </div>
+        </div>
+
+        <!-- QUESTÃO 06 -->
+        <div class="question-card">
+            <div class="question-text">Questão 06. A sequência correta das ações a serem realizadas em procedimentos de primeiros socorros (Abramet, 2005, p. 09) é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">a) 1) Manter a calma; 2) garantir a segurança; 3) pedir socorro</button>
+                <button id="q6-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q6-fb').style.display='block';">b) 1) Garantir a segurança; 2) manter a calma 3) pedir socorro;</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">c) 2) pedir socorro; 2) garantir a segurança; 3) Controlar a situação</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">d) 3) Controlar a situação; 2) manter a calma; 3) pedir socorro;</button>
+            </div>
+            <div id="q6-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA B.</span> Segundo o protocolo, a segurança do socorrista e da cena é o primeiro passo absoluto para evitar novas vítimas.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 07 -->
+        <div class="question-card">
+            <div class="question-text">Questão 07. Com base na Lista de Doenças Relacionadas ao Trabalho, assinale a alternativa que NÃO corresponde a uma doença do trabalho em sua origem primária:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">a) Asbestose.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">b) Silicose.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">c) LER/DORT.</button>
+                <button id="q7-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q7-fb').style.display='block';">d) Esclerose múltipla.</button>
+            </div>
+            <div id="q7-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA D.</span> A esclerose múltipla é uma doença autoimune neurológica e não é classificada como doença profissional de origem laboral primária.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 08 -->
+        <div class="question-card">
+            <div class="question-text">Questão 08. O vazamento de gás é um fato que deve ser observado com máxima atenção. Nos casos onde ocorrer esse incidente, o vigia NÃO deverá:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">a) Abrir todas as portas e janelas da copa/cozinha.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">b) Acionar o corpo de bombeiros.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">c) Comunicar o fato a empresa que entregou o botijão defeituoso.</button>
+                <button id="q8-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q8-fb').style.display='block';">d) Ligar todas as lâmpadas da área onde estiver instalado o botijão.</button>
+            </div>
+            <div id="q8-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA D.</span> Jamais acione interruptores elétricos em vazamentos de gás, pois a faísca pode causar uma explosão imediata.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 09 -->
+        <div class="question-card">
+            <div class="question-text">Questão 09. De acordo com a NBR 12693 (Sistemas de proteção por extintores de incêndio) e a NR-23 (Proteção Contra Incêndios), os extintores portáteis devem ser instalados respeitando uma altura máxima para a alça de manuseio, medida a partir do piso acabado, garantindo acessibilidade e facilidade de uso. Essa altura máxima é de:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">a) 1,20 m</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">b) 1,40 m</button>
+                <button id="q9-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q9-fb').style.display='block';">c) 1,60 m</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">d) 1,80 m</button>
+            </div>
+            <div id="q9-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA C.</span> As normas técnicas fixam o limite de 1,60m para permitir que pessoas de diferentes estaturas consigam retirar o equipamento com rapidez.
+            </div>
+        </div>
+
+        <!-- QUESTÃO 10 -->
+        <div class="question-card">
+            <div class="question-text">Questão 10. Durante um atendimento de primeiros socorros a uma vítima de desmaio, algumas atitudes podem agravar o quadro clínico ou colocar a vida da pessoa em risco. Sobre o tema, assinale a alternativa que apresenta uma conduta que NÃO deve ser adotada nessa situação:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">a) Deitar a vítima de costas e elevar seus membros inferiores acima do nível do coração.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">b) Afrouxar as roupas da vítima para facilitar a respiração.</button>
+                <button id="q10-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q10-fb').style.display='block';">c) Oferecer água ou qualquer líquido imediatamente após a vítima recuperar a consciência.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">d) Verificar a respiração e os sinais vitais enquanto aguarda o socorro especializado.</button>
+            </div>
+            <div id="q10-fb" class="feedback">
+                <span class="feedback-title">JUSTIFICATIVA: GABARITO LETRA C.</span> Ingerir líquidos em estado de consciência alterada pode causar pneumonia por aspiração ou asfixia.
+            </div>
+        </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>🏆 SIMULADO 7 FINALIZADO COM SUCESSO!</p>
+    </div>
+</div>
+
+</body>
+</html>
