@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado de Elite - Eusébio</title>
+    <style>
+        body { background-color: #f1f5f9; margin: 0; padding: 20px; font-family: 'Inter', sans-serif; }
+        .main-container { max-width: 900px; margin: auto; background-color: #ffffff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); overflow: hidden; border: 1px solid #cbd5e1; }
+        
+        .header { background-color: #0f172a; color: #ffffff; padding: 45px 20px; text-align: center; border-bottom: 8px solid #d4af37; }
+        .header h1 { margin: 0; font-size: 30px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; }
+        .header p { margin: 10px 0 0; font-size: 18px; font-weight: 600; color: #d4af37; text-transform: uppercase; }
+
+        .content { padding: 35px; }
+        .question-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; margin-bottom: 60px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+        
+        .question-text { color: #1e293b; font-size: 18px; font-weight: 600; line-height: 1.7; margin-bottom: 25px; text-align: justify; }
+        .options-container { display: flex; flex-direction: column; gap: 14px; }
+        
+        .option-btn { 
+            width: 100%; padding: 18px 22px; border-radius: 10px; border: 4px solid #1e293b; 
+            background-color: #ffffff; color: #1e293b; font-size: 16px; font-weight: 800; 
+            text-align: left; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-transform: uppercase;
+        }
+        .option-btn:hover { background-color: #f8fafc; border-color: #475569; }
+        
+        .feedback { display: none; margin-top: 25px; padding: 20px; border-radius: 10px; border-left: 8px solid #0f172a; background-color: #f1f5f9; font-size: 16px; font-weight: 600; line-height: 1.6; color: #1e293b; }
+        .feedback-title { color: #15803d; display: block; margin-bottom: 8px; font-size: 18px; font-weight: 900; }
+
+        .footer { background-color: #d4af37; padding: 35px; text-align: center; border-top: 6px solid #0f172a; }
+        .footer p { margin: 0; color: #000; font-weight: 900; font-size: 20px; text-transform: uppercase; }
+        
+        .tag { display: inline-block; background: #0f172a; color: #d4af37; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 900; margin-bottom: 10px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="header">
+        <h1>SIMULADO DE ELITE - EUSÉBIO</h1>
+        <p>FORMAÇÃO, ATUALIDADES E ESTATUTO - 50 QUESTÕES</p>
+    </div>
+
+    <div class="content">
+
+        <!-- BLOCO 1: HISTÓRIA E ORIGENS (1-10) -->
+
+        <div class="question-card">
+            <span class="tag">Formação Territorial</span>
+            <div class="question-text">Questão 01. Durante uma pesquisa sobre as raízes étnicas do Ceará, um estudante descobre que a região de Eusébio, situada entre as bacias do Rio Pacoti e do Rio Coaçu, era habitada por povos indígenas que dominavam a pesca e a coleta. Segundo o material histórico, essas nações eram:</div>
+            <div class="options-container">
+                <button id="q1-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q1-fb').style.display='block';">A) Potiguara e Tremembé.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">B) Tabajara e Pitaguary.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">C) Kariri e Tupinambá.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q1-correta').style.background='#22c55e'; document.getElementById('q1-correta').style.color='#fff'; document.getElementById('q1-fb').style.display='block';">D) Jenipapo-Kanindé e Tapeba.</button>
+            </div>
+            <div id="q1-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Os Potiguara e os Tremembé foram os habitantes originais da área litorânea e fluvial que hoje compõe o Eusébio.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Colonização</span>
+            <div class="question-text">Questão 02. Um historiador, ao descrever o século XVIII em Eusébio, menciona que a localidade era referida como "Aldeia de Parnamirim". Ele destaca o papel de um missionário jesuíta fundamental no processo de catequese daquela época. O material identifica este missionário como:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">A) Padre José de Anchieta.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">B) Padre Manuel da Nóbrega.</button>
+                <button id="q2-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q2-fb').style.display='block';">C) Padre Antônio Farinha Preto.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q2-correta').style.background='#22c55e'; document.getElementById('q2-correta').style.color='#fff'; document.getElementById('q2-fb').style.display='block';">D) Padre Mororó.</button>
+            </div>
+            <div id="q2-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O Padre Antônio Farinha Preto é citado como o responsável pelo missionamento na antiga Aldeia de Parnamirim.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Origem do Nome</span>
+            <div class="question-text">Questão 03. No século XIX, o Eusébio tornou-se um ponto de descanso vital para comboieiros que viajavam rumo à Fortaleza. Uma casa de pouso próxima a uma lagoa tornou-se famosa, e os viajantes diziam: "vou parar no lugar do Eusébio". Quem era esse homem que deu origem ao nome popular da cidade?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">A) Um ex-escravizado liberto da região.</button>
+                <button id="q3-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q3-fb').style.display='block';">B) Eusébio José Coelho, imigrante português de Braga.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">C) Um capitão-mor da vila de Aquiraz.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q3-correta').style.background='#22c55e'; document.getElementById('q3-correta').style.color='#fff'; document.getElementById('q3-fb').style.display='block';">D) O primeiro delegado do distrito.</button>
+            </div>
+            <div id="q3-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Eusébio José Coelho, natural de Braga, Portugal, era o dono da casa de pouso que gerou a denominação popular.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Homenagem Oficial</span>
+            <div class="question-text">Questão 04. Um palestrante em um evento cívico na Câmara Municipal de Eusébio explica que, embora a origem do nome seja popular, o governo oficializou o topônimo como uma homenagem a Eusébio de Queirós Coutinho Matoso da Câmara. Qual foi o principal feito histórico deste homem?</div>
+            <div class="options-container">
+                <button id="q4-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q4-fb').style.display='block';">A) Autor da lei de 1850 que proibiu o tráfico negreiro.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">B) Liderar a Batalha do Jenipapo no Ceará.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">C) Fundar a primeira escola pública do município.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q4-correta').style.background='#22c55e'; document.getElementById('q4-correta').style.color='#fff'; document.getElementById('q4-fb').style.display='block';">D) Comandar a Confederação do Equador.</button>
+            </div>
+            <div id="q4-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Eusébio de Queirós foi o ministro da Justiça autor da Lei nº 581, de 4 de setembro de 1850.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Evolução Nominal</span>
+            <div class="question-text">Questão 05. Ao consultar documentos antigos de 1935, um cartógrafo nota que o distrito era chamado de "Eusébio de Queiroz". No entanto, uma simplificação ocorreu três anos depois, fixando o nome atual. Em que ano o município passou a ser chamado apenas de "Eusébio"?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">A) 1935.</button>
+                <button id="q5-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q5-fb').style.display='block';">B) 1938.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">C) 1987.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q5-correta').style.background='#22c55e'; document.getElementById('q5-correta').style.color='#fff'; document.getElementById('q5-fb').style.display='block';">D) 2008.</button>
+            </div>
+            <div id="q5-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A simplificação do nome do distrito para apenas "Eusébio" ocorreu em 1938.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Autonomia Política</span>
+            <div class="question-text">Questão 06. No dia 23 de junho de 1987, uma multidão celebra a assinatura da Lei Estadual nº 11.333. A partir desse momento, Eusébio conquista sua emancipação e deixa de ser subordinado ao município de:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">A) Fortaleza.</button>
+                <button id="q6-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q6-fb').style.display='block';">B) Aquiraz.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">C) Itaitinga.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q6-correta').style.background='#22c55e'; document.getElementById('q6-correta').style.color='#fff'; document.getElementById('q6-fb').style.display='block';">D) Maracanaú.</button>
+            </div>
+            <div id="q6-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Eusébio foi emancipado politicamente do município de Aquiraz.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Pioneirismo Político</span>
+            <div class="question-text">Questão 07. Imagine a cerimônia de posse em 1º de janeiro de 1989. Um líder político local assume como o primeiro prefeito eleito de Eusébio após liderar o movimento de emancipação. Trata-se de:</div>
+            <div class="options-container">
+                <button id="q7-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q7-fb').style.display='block';">A) Edson Sá.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">B) Acilon Gonçalves.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">C) Arimatéa Júnior.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q7-correta').style.background='#22c55e'; document.getElementById('q7-correta').style.color='#fff'; document.getElementById('q7-fb').style.display='block';">D) Paulo César Feitosa.</button>
+            </div>
+            <div id="q7-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Edson Sá foi o líder do movimento emancipacionista e o primeiro prefeito eleito (1989-1992).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Religiosidade e Tradição</span>
+            <div class="question-text">Questão 08. Todo ano, no mês de julho, a cidade de Eusébio se mobiliza para as celebrações religiosas em honra à sua padroeira. De acordo com o calendário cultural da cidade, quem é a padroeira oficial?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">A) Nossa Senhora de Fátima.</button>
+                <button id="q8-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q8-fb').style.display='block';">B) Senhora Sant'Ana.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">C) Nossa Senhora do Perpétuo Socorro.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q8-correta').style.background='#22c55e'; document.getElementById('q8-correta').style.color='#fff'; document.getElementById('q8-fb').style.display='block';">D) Santa Luzia.</button>
+            </div>
+            <div id="q8-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A padroeira de Eusébio é Senhora Sant'Ana, celebrada em 26 de julho.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Turismo de Eventos</span>
+            <div class="question-text">Questão 09. Um guia turístico apresenta o Eusébio como a sede de um dos maiores espetáculos teatrais e religiosos ao ar livre do Ceará, que atrai milhares de fiéis anualmente. Ele se refere à encenação da:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">A) Malhação de Judas.</button>
+                <button id="q9-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q9-fb').style.display='block';">B) Paixão de Cristo.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">C) Festa de Reis.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q9-correta').style.background='#22c55e'; document.getElementById('q9-correta').style.color='#fff'; document.getElementById('q9-fb').style.display='block';">D) Romaria do Eusébio.</button>
+            </div>
+            <div id="q9-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A encenação da Paixão de Cristo em Eusébio é um dos maiores e mais tradicionais eventos do estado.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Censo Demográfico</span>
+            <div class="question-text">Questão 10. Ao analisar os dados do IBGE, um sociólogo observa que o Eusébio possui um crescimento populacional acelerado. Quem nasce ou reside no município é oficialmente denominado:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">A) Eusebiense.</button>
+                <button id="q10-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q10-fb').style.display='block';">B) Eusebiano.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">C) Eusebiopolitano.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q10-correta').style.background='#22c55e'; document.getElementById('q10-correta').style.color='#fff'; document.getElementById('q10-fb').style.display='block';">D) Eusebiense-do-Ceará.</button>
+            </div>
+            <div id="q10-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O gentílico oficial dos habitantes de Eusébio é eusebiano.
+            </div>
+        </div>
+
+        <!-- BLOCO 2: GEOGRAFIA E AMBIENTE (11-20) -->
+
+        <div class="question-card">
+            <span class="tag">Geografia Política</span>
+            <div class="question-text">Questão 11. Um patrulheiro ambiental de Eusébio percorre os limites do município e identifica que a fronteira ao Norte e Oeste é demarcada pela divisa com qual município?</div>
+            <div class="options-container">
+                <button id="q11-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q11-fb').style.display='block';">A) Fortaleza.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q11-correta').style.background='#22c55e'; document.getElementById('q11-correta').style.color='#fff'; document.getElementById('q11-fb').style.display='block';">B) Maracanaú.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q11-correta').style.background='#22c55e'; document.getElementById('q11-correta').style.color='#fff'; document.getElementById('q11-fb').style.display='block';">C) Pacatuba.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q11-correta').style.background='#22c55e'; document.getElementById('q11-correta').style.color='#fff'; document.getElementById('q11-fb').style.display='block';">D) Caucaia.</button>
+            </div>
+            <div id="q11-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Eusébio faz fronteira ao Norte e Oeste com Fortaleza.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Limites a Leste</span>
+            <div class="question-text">Questão 12. Se um motorista sair do centro de Eusébio e dirigir em linha reta para o Leste (sentido litoral), ele atravessará a fronteira para qual município?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q12-correta').style.background='#22c55e'; document.getElementById('q12-correta').style.color='#fff'; document.getElementById('q12-fb').style.display='block';">A) Itaitinga.</button>
+                <button id="q12-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q12-fb').style.display='block';">B) Aquiraz.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q12-correta').style.background='#22c55e'; document.getElementById('q12-correta').style.color='#fff'; document.getElementById('q12-fb').style.display='block';">C) Cascavel.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q12-correta').style.background='#22c55e'; document.getElementById('q12-correta').style.color='#fff'; document.getElementById('q12-fb').style.display='block';">D) Pindoretama.</button>
+            </div>
+            <div id="q12-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O município de Aquiraz situa-se ao Leste de Eusébio.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Fronteira Sul</span>
+            <div class="question-text">Questão 13. Ao sul do território eusebiano, existe um município vizinho que também integra a Região Metropolitana de Fortaleza e compartilha limites territoriais. Este município é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q13-correta').style.background='#22c55e'; document.getElementById('q13-correta').style.color='#fff'; document.getElementById('q13-fb').style.display='block';">A) Horizonte.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q13-correta').style.background='#22c55e'; document.getElementById('q13-correta').style.color='#fff'; document.getElementById('q13-fb').style.display='block';">B) Pacajus.</button>
+                <button id="q13-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q13-fb').style.display='block';">C) Itaitinga.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q13-correta').style.background='#22c55e'; document.getElementById('q13-correta').style.color='#fff'; document.getElementById('q13-fb').style.display='block';">D) Guaiúba.</button>
+            </div>
+            <div id="q13-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> Itaitinga é o vizinho de Eusébio na sua porção Sul.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Extensão Territorial</span>
+            <div class="question-text">Questão 14. Um engenheiro agrimensor apresenta dados sobre a ocupação do solo e destaca que o Eusébio possui uma área territorial pequena, mas de altíssima densidade econômica. Qual a área oficial aproximada?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q14-correta').style.background='#22c55e'; document.getElementById('q14-correta').style.color='#fff'; document.getElementById('q14-fb').style.display='block';">A) 55 km².</button>
+                <button id="q14-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q14-fb').style.display='block';">B) 79 km².</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q14-correta').style.background='#22c55e'; document.getElementById('q14-correta').style.color='#fff'; document.getElementById('q14-fb').style.display='block';">C) 110 km².</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q14-correta').style.background='#22c55e'; document.getElementById('q14-correta').style.color='#fff'; document.getElementById('q14-fb').style.display='block';">D) 250 km².</button>
+            </div>
+            <div id="q14-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A área territorial de Eusébio é de aproximadamente 78,818 km² (cerca de 79 km²).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Clima e Temperatura</span>
+            <div class="question-text">Questão 15. Um meteorologista explica que a proximidade com o mar influencia o clima de Eusébio, classificado como Tropical Quente Subúmido. Qual a variação da temperatura média anual no município?</div>
+            <div class="options-container">
+                <button id="q15-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q15-fb').style.display='block';">A) 26°C a 28°C.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q15-correta').style.background='#22c55e'; document.getElementById('q15-correta').style.color='#fff'; document.getElementById('q15-fb').style.display='block';">B) 20°C a 22°C.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q15-correta').style.background='#22c55e'; document.getElementById('q15-correta').style.color='#fff'; document.getElementById('q15-fb').style.display='block';">C) 32°C a 35°C.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q15-correta').style.background='#22c55e'; document.getElementById('q15-correta').style.color='#fff'; document.getElementById('q15-fb').style.display='block';">D) 18°C a 20°C.</button>
+            </div>
+            <div id="q15-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> As temperaturas médias anuais situam-se entre 26°C e 28°C.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Regime Pluviométrico</span>
+            <div class="question-text">Questão 16. Um agricultor local monitora o céu aguardando o início da estação chuvosa. De acordo com o material técnico, o período de chuvas no Eusébio concentra-se historicamente entre:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q16-correta').style.background='#22c55e'; document.getElementById('q16-correta').style.color='#fff'; document.getElementById('q16-fb').style.display='block';">A) Setembro a Dezembro.</button>
+                <button id="q16-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q16-fb').style.display='block';">B) Janeiro a Maio/Junho.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q16-correta').style.background='#22c55e'; document.getElementById('q16-correta').style.color='#fff'; document.getElementById('q16-fb').style.display='block';">C) Outubro a Janeiro.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q16-correta').style.background='#22c55e'; document.getElementById('q16-correta').style.color='#fff'; document.getElementById('q16-fb').style.display='block';">D) Março a Setembro.</button>
+            </div>
+            <div id="q16-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O período chuvoso ocorre de Janeiro a Maio ou Junho.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Relevo e Geologia</span>
+            <div class="question-text">Questão 17. Ao projetar uma nova estrada, um engenheiro civil analisa que o relevo de Eusébio é composto por planícies e tabuleiros. Ele conclui corretamente que o município está inserido em qual unidade fisiográfica?</div>
+            <div class="options-container">
+                <button id="q17-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q17-fb').style.display='block';">A) Tabuleiros Costeiros.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q17-correta').style.background='#22c55e'; document.getElementById('q17-correta').style.color='#fff'; document.getElementById('q17-fb').style.display='block';">B) Depressão Sertaneja.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q17-correta').style.background='#22c55e'; document.getElementById('q17-correta').style.color='#fff'; document.getElementById('q17-fb').style.display='block';">C) Planalto de Ibiapaba.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q17-correta').style.background='#22c55e'; document.getElementById('q17-correta').style.color='#fff'; document.getElementById('q17-fb').style.display='block';">D) Chapada do Araripe.</button>
+            </div>
+            <div id="q17-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> O Eusébio localiza-se na unidade dos Tabuleiros Costeiros e Planície Litoral Fluviomarinha.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Vegetação</span>
+            <div class="question-text">Questão 18. Um biólogo identifica espécimes vegetais resistentes à salinidade e adaptados a áreas de transição entre rios e mar. Em Eusébio, qual tipo de vegetação é característico dessas zonas?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q18-correta').style.background='#22c55e'; document.getElementById('q18-correta').style.color='#fff'; document.getElementById('q18-fb').style.display='block';">A) Caatinga arbustiva.</button>
+                <button id="q18-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q18-fb').style.display='block';">B) Manguezal.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q18-correta').style.background='#22c55e'; document.getElementById('q18-correta').style.color='#fff'; document.getElementById('q18-fb').style.display='block';">C) Mata de Cocais.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q18-correta').style.background='#22c55e'; document.getElementById('q18-correta').style.color='#fff'; document.getElementById('q18-fb').style.display='block';">D) Cerrado cearense.</button>
+            </div>
+            <div id="q18-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Manguezais e complexo vegetacional da zona litorânea são típicos do município.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Bacias Hidrográficas</span>
+            <div class="question-text">Questão 19. Um gestor público de Eusébio elabora um plano de preservação hídrica. O foco principal de drenagem superficial do município é qual rio?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q19-correta').style.background='#22c55e'; document.getElementById('q19-correta').style.color='#fff'; document.getElementById('q19-fb').style.display='block';">A) Rio Jaguaribe.</button>
+                <button id="q19-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q19-fb').style.display='block';">B) Rio Coaçu.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q19-correta').style.background='#22c55e'; document.getElementById('q19-correta').style.color='#fff'; document.getElementById('q19-fb').style.display='block';">C) Rio Acaraú.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q19-correta').style.background='#22c55e'; document.getElementById('q19-correta').style.color='#fff'; document.getElementById('q19-fb').style.display='block';">D) Rio Curu.</button>
+            </div>
+            <div id="q19-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O Rio Coaçu é a principal drenagem que corta o território municipal.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Patrimônio Ambiental</span>
+            <div class="question-text">Questão 20. Durante um passeio ecológico, um grupo de estudantes visita a Lagoa dos Pássaros e a Lagoa do Parnamirim. Essas belezas naturais são marcas registradas de qual município?</div>
+            <div class="options-container">
+                <button id="q20-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q20-fb').style.display='block';">A) Eusébio.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q20-correta').style.background='#22c55e'; document.getElementById('q20-correta').style.color='#fff'; document.getElementById('q20-fb').style.display='block';">B) Aquiraz.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q20-correta').style.background='#22c55e'; document.getElementById('q20-correta').style.color='#fff'; document.getElementById('q20-fb').style.display='block';">C) Fortaleza.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q20-correta').style.background='#22c55e'; document.getElementById('q20-correta').style.color='#fff'; document.getElementById('q20-fb').style.display='block';">D) Horizonte.</button>
+            </div>
+            <div id="q20-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Ambas as lagoas são referências geográficas e ambientais de Eusébio.
+            </div>
+        </div>
+
+        <!-- BLOCO 3: ECONOMIA E INDICADORES (21-30) -->
+
+        <div class="question-card">
+            <span class="tag">Desenvolvimento Humano</span>
+            <div class="question-text">Questão 21. Um sociólogo compara o Índice de Desenvolvimento Humano Municipal (IDHM) das cidades do Ceará. Ele identifica que o Eusébio possui um índice considerado ALTO, atingindo qual pontuação?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q21-correta').style.background='#22c55e'; document.getElementById('q21-correta').style.color='#fff'; document.getElementById('q21-fb').style.display='block';">A) 0,550.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q21-correta').style.background='#22c55e'; document.getElementById('q21-correta').style.color='#fff'; document.getElementById('q21-fb').style.display='block';">B) 0,650.</button>
+                <button id="q21-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q21-fb').style.display='block';">C) 0,701.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q21-correta').style.background='#22c55e'; document.getElementById('q21-correta').style.color='#fff'; document.getElementById('q21-fb').style.display='block';">D) 0,850.</button>
+            </div>
+            <div id="q21-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O IDHM de Eusébio é 0,701 (faixa de alto desenvolvimento).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Riqueza Municipal</span>
+            <div class="question-text">Questão 22. Um investidor financeiro analisa o PIB per capita de diversos municípios cearenses. Ao chegar no Eusébio, ele nota que o valor é extremamente competitivo, chegando a:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q22-correta').style.background='#22c55e'; document.getElementById('q22-correta').style.color='#fff'; document.getElementById('q22-fb').style.display='block';">A) R$ 35.000,00.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q22-correta').style.background='#22c55e'; document.getElementById('q22-correta').style.color='#fff'; document.getElementById('q22-fb').style.display='block';">B) R$ 50.000,00.</button>
+                <button id="q22-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q22-fb').style.display='block';">C) R$ 66.608,49.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q22-correta').style.background='#22c55e'; document.getElementById('q22-correta').style.color='#fff'; document.getElementById('q22-fb').style.display='block';">D) R$ 80.000,00.</button>
+            </div>
+            <div id="q22-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O PIB per capita de Eusébio é um dos maiores do Ceará, fixado em R$ 66.608,49.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Destaque Econômico</span>
+            <div class="question-text">Questão 23. No Eusébio, o setor de Serviços é o principal motor econômico, representando mais de metade de todo o valor adicionado bruto. Qual a porcentagem aproximada deste setor na economia local?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q23-correta').style.background='#22c55e'; document.getElementById('q23-correta').style.color='#fff'; document.getElementById('q23-fb').style.display='block';">A) 30%.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q23-correta').style.background='#22c55e'; document.getElementById('q23-correta').style.color='#fff'; document.getElementById('q23-fb').style.display='block';">B) 45%.</button>
+                <button id="q23-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q23-fb').style.display='block';">C) 53,2%.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q23-correta').style.background='#22c55e'; document.getElementById('q23-correta').style.color='#fff'; document.getElementById('q23-fb').style.display='block';">D) 70%.</button>
+            </div>
+            <div id="q23-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O setor de serviços é o destaque, com 53,2% de participação.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Rankings FIRJAN</span>
+            <div class="question-text">Questão 24. Uma notícia de jornal destaca: "Eusébio lidera o Ranking FIRJAN IFDM". De acordo com os dados técnicos, o município ocupa o 1º lugar em desenvolvimento municipal em quais instâncias?</div>
+            <div class="options-container">
+                <button id="q24-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q24-fb').style.display='block';">A) No Ceará e no Nordeste.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q24-correta').style.background='#22c55e'; document.getElementById('q24-correta').style.color='#fff'; document.getElementById('q24-fb').style.display='block';">B) Apenas na Região Metropolitana.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q24-correta').style.background='#22c55e'; document.getElementById('q24-correta').style.color='#fff'; document.getElementById('q24-fb').style.display='block';">C) Apenas no Ceará.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q24-correta').style.background='#22c55e'; document.getElementById('q24-correta').style.color='#fff'; document.getElementById('q24-fb').style.display='block';">D) Em todo o Brasil.</button>
+            </div>
+            <div id="q24-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Eusébio é o 1º colocado tanto no ranking estadual quanto no regional (Nordeste).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Renda Média</span>
+            <div class="question-text">Questão 25. Um analista do mercado imobiliário observa que o Eusébio possui a maior renda média mensal do Ceará, superando inclusive Fortaleza. O valor dessa renda estimada é de:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q25-correta').style.background='#22c55e'; document.getElementById('q25-correta').style.color='#fff'; document.getElementById('q25-fb').style.display='block';">A) R$ 3.200,00.</button>
+                <button id="q25-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q25-fb').style.display='block';">B) R$ 4.607,83.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q25-correta').style.background='#22c55e'; document.getElementById('q25-correta').style.color='#fff'; document.getElementById('q25-fb').style.display='block';">C) R$ 5.500,00.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q25-correta').style.background='#22c55e'; document.getElementById('q25-correta').style.color='#fff'; document.getElementById('q25-fb').style.display='block';">D) R$ 2.800,00.</button>
+            </div>
+            <div id="q25-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A renda média mensal em Eusébio é de R$ 4.607,83.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Executivo Municipal</span>
+            <div class="question-text">Questão 26. O Paço Municipal de Eusébio é o centro das decisões administrativas. O prédio onde funcionam o Gabinete do Prefeito e do Vice-Prefeito localiza-se em qual bairro?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q26-correta').style.background='#22c55e'; document.getElementById('q26-correta').style.color='#fff'; document.getElementById('q26-fb').style.display='block';">A) Centro.</button>
+                <button id="q26-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q26-fb').style.display='block';">B) Autódromo.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q26-correta').style.background='#22c55e'; document.getElementById('q26-correta').style.color='#fff'; document.getElementById('q26-fb').style.display='block';">C) Coaçu.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q26-correta').style.background='#22c55e'; document.getElementById('q26-correta').style.color='#fff'; document.getElementById('q26-fb').style.display='block';">D) Jabuti.</button>
+            </div>
+            <div id="q26-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A sede administrativa da prefeitura situa-se no bairro Autódromo.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Legislativo</span>
+            <div class="question-text">Questão 27. Um cidadão eusebiano deseja acompanhar uma sessão ordinária para cobrar melhorias no seu bairro. Ele deve se dirigir à Câmara Municipal de Vereadores, que fica na:</div>
+            <div class="options-container">
+                <button id="q27-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q27-fb').style.display='block';">A) Avenida Eduardo Sá.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q27-correta').style.background='#22c55e'; document.getElementById('q27-correta').style.color='#fff'; document.getElementById('q27-fb').style.display='block';">B) Rua Edmilson Pinheiro.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q27-correta').style.background='#22c55e'; document.getElementById('q27-correta').style.color='#fff'; document.getElementById('q27-fb').style.display='block';">C) Avenida Washington Soares.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q27-correta').style.background='#22c55e'; document.getElementById('q27-correta').style.color='#fff'; document.getElementById('q27-fb').style.display='block';">D) Rodovia BR-116.</button>
+            </div>
+            <div id="q27-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> A Câmara Municipal de Eusébio está localizada na Avenida Eduardo Sá.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Estrutura de Poder</span>
+            <div class="question-text">Questão 28. No ordenamento municipal brasileiro, adotado também por Eusébio, a estrutura política é dividida entre Executivo e Legislativo. Qual destes poderes NÃO existe em âmbito municipal?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q28-correta').style.background='#22c55e'; document.getElementById('q28-correta').style.color='#fff'; document.getElementById('q28-fb').style.display='block';">A) Executivo.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q28-correta').style.background='#22c55e'; document.getElementById('q28-correta').style.color='#fff'; document.getElementById('q28-fb').style.display='block';">B) Legislativo.</button>
+                <button id="q28-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q28-fb').style.display='block';">C) Judiciário.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q28-correta').style.background='#22c55e'; document.getElementById('q28-correta').style.color='#fff'; document.getElementById('q28-fb').style.display='block';">D) Moderador.</button>
+            </div>
+            <div id="q28-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> Municípios brasileiros não possuem Poder Judiciário próprio; o Judiciário é de competência estadual e federal.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Constituição Municipal</span>
+            <div class="question-text">Questão 29. A Lei Orgânica de Eusébio nº 1 é a norma suprema da administração local. Em que data foi promulgada a versão consolidada deste documento essencial?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q29-correta').style.background='#22c55e'; document.getElementById('q29-correta').style.color='#fff'; document.getElementById('q29-fb').style.display='block';">A) 23 de Junho de 1987.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q29-correta').style.background='#22c55e'; document.getElementById('q29-correta').style.color='#fff'; document.getElementById('q29-fb').style.display='block';">B) 05 de Outubro de 1988.</button>
+                <button id="q29-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q29-fb').style.display='block';">C) 16 de Junho de 2008.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q29-correta').style.background='#22c55e'; document.getElementById('q29-correta').style.color='#fff'; document.getElementById('q29-fb').style.display='block';">D) 01 de Maio de 2010.</button>
+            </div>
+            <div id="q29-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> A Lei Orgânica consolidada foi promulgada em 16 de Junho de 2008.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Democracia Direta</span>
+            <div class="question-text">Questão 30. De acordo com o Art. 6º da Lei Orgânica Municipal, a soberania popular em Eusébio será exercida através de alguns mecanismos. Qual destes NÃO é citado como meio de democracia direta na lei?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q30-correta').style.background='#22c55e'; document.getElementById('q30-correta').style.color='#fff'; document.getElementById('q30-fb').style.display='block';">A) Plebiscito.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q30-correta').style.background='#22c55e'; document.getElementById('q30-correta').style.color='#fff'; document.getElementById('q30-fb').style.display='block';">B) Referendo.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q30-correta').style.background='#22c55e'; document.getElementById('q30-correta').style.color='#fff'; document.getElementById('q30-fb').style.display='block';">C) Iniciativa Popular.</button>
+                <button id="q30-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q30-fb').style.display='block';">D) Decisão por Aclamação Pública em Praça.</button>
+            </div>
+            <div id="q30-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA D.</span> Os meios legais são plebiscito, referendo, iniciativa popular e veto popular.
+            </div>
+        </div>
+
+        <!-- BLOCO 4: ESTATUTO DO SERVIDOR (31-50) -->
+
+        <div class="question-card">
+            <span class="tag">Acesso ao Serviço</span>
+            <div class="question-text">Questão 31. Paula foi aprovada no concurso para Agente de Portaria. Ao ler o Estatuto (Lei nº 460/2001), ela confirma que, para ser investida no cargo, deve possuir a idade mínima de:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q31-correta').style.background='#22c55e'; document.getElementById('q31-correta').style.color='#fff'; document.getElementById('q31-fb').style.display='block';">A) 16 anos.</button>
+                <button id="q31-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q31-fb').style.display='block';">B) 18 anos.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q31-correta').style.background='#22c55e'; document.getElementById('q31-correta').style.color='#fff'; document.getElementById('q31-fb').style.display='block';">C) 21 anos.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q31-correta').style.background='#22c55e'; document.getElementById('q31-correta').style.color='#fff'; document.getElementById('q31-fb').style.display='block';">D) 25 anos.</button>
+            </div>
+            <div id="q31-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A idade mínima exigida é de 18 anos completos (Art. 7º).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Prazo de Posse</span>
+            <div class="question-text">Questão 32. Roberto recebeu com alegria o ato de sua nomeação. De acordo com o Estatuto, ele deve ficar atento ao calendário, pois tem o prazo legal de quantos dias para tomar posse?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q32-correta').style.background='#22c55e'; document.getElementById('q32-correta').style.color='#fff'; document.getElementById('q32-fb').style.display='block';">A) 05 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q32-correta').style.background='#22c55e'; document.getElementById('q32-correta').style.color='#fff'; document.getElementById('q32-fb').style.display='block';">B) 10 dias.</button>
+                <button id="q32-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q32-fb').style.display='block';">C) 15 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q32-correta').style.background='#22c55e'; document.getElementById('q32-correta').style.color='#fff'; document.getElementById('q32-fb').style.display='block';">D) 30 dias.</button>
+            </div>
+            <div id="q32-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> A posse deve ocorrer no prazo de 15 dias contados da publicação do ato de nomeação (Art. 18).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Início das Atividades</span>
+            <div class="question-text">Questão 33. Fernanda tomou posse e agora precisa começar a trabalhar. Qual o prazo improrrogável que ela possui para entrar em efetivo exercício, sob pena de exoneração imediata do cargo?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q33-correta').style.background='#22c55e'; document.getElementById('q33-correta').style.color='#fff'; document.getElementById('q33-fb').style.display='block';">A) 05 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q33-correta').style.background='#22c55e'; document.getElementById('q33-correta').style.color='#fff'; document.getElementById('q33-fb').style.display='block';">B) 10 dias.</button>
+                <button id="q33-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q33-fb').style.display='block';">C) 15 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q33-correta').style.background='#22c55e'; document.getElementById('q33-correta').style.color='#fff'; document.getElementById('q33-fb').style.display='block';">D) 30 dias.</button>
+            </div>
+            <div id="q33-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O prazo para entrada em exercício é de 15 dias (Art. 20).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Estabilidade</span>
+            <div class="question-text">Questão 34. Marcos completou 36 meses de serviço efetivo em Eusébio. Ele sabe que passou pelo estágio probatório. Durante esse período, ele foi avaliado por uma comissão. De acordo com as leis atuais, a duração do estágio é de:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q34-correta').style.background='#22c55e'; document.getElementById('q34-correta').style.color='#fff'; document.getElementById('q34-fb').style.display='block';">A) 01 ano.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q34-correta').style.background='#22c55e'; document.getElementById('q34-correta').style.color='#fff'; document.getElementById('q34-fb').style.display='block';">B) 02 anos.</button>
+                <button id="q34-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q34-fb').style.display='block';">C) 03 anos.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q34-correta').style.background='#22c55e'; document.getElementById('q34-correta').style.color='#fff'; document.getElementById('q34-fb').style.display='block';">D) 05 anos.</button>
+            </div>
+            <div id="q34-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> O estágio probatório tem duração de 3 anos (Art. 25).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Critérios de Avaliação</span>
+            <div class="question-text">Questão 35. Um avaliador da prefeitura analisa o desempenho de um novo vigia em estágio probatório. Qual destes critérios NÃO faz parte da avaliação sistemática de aptidão prevista no Art. 25 do Estatuto?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q35-correta').style.background='#22c55e'; document.getElementById('q35-correta').style.color='#fff'; document.getElementById('q35-fb').style.display='block';">A) Disciplina.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q35-correta').style.background='#22c55e'; document.getElementById('q35-correta').style.color='#fff'; document.getElementById('q35-fb').style.display='block';">B) Produtividade.</button>
+                <button id="q35-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q35-fb').style.display='block';">C) Residência fixa no município.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q35-correta').style.background='#22c55e'; document.getElementById('q35-correta').style.color='#fff'; document.getElementById('q35-fb').style.display='block';">D) Assiduidade.</button>
+            </div>
+            <div id="q35-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> Morar em Eusébio não é critério de avaliação de desempenho no estágio. Os critérios são: assiduidade, disciplina, iniciativa, produtividade e responsabilidade.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Movimentação por Saúde</span>
+            <div class="question-text">Questão 36. Um servidor estável sofreu uma limitação física grave que o impede de realizar rondas motorizadas. Após perícia médica, ele é investido em um cargo administrativo com atribuições compatíveis. Como se chama este instituto?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q36-correta').style.background='#22c55e'; document.getElementById('q36-correta').style.color='#fff'; document.getElementById('q36-fb').style.display='block';">A) Reintegração.</button>
+                <button id="q36-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q36-fb').style.display='block';">B) Readaptação.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q36-correta').style.background='#22c55e'; document.getElementById('q36-correta').style.color='#fff'; document.getElementById('q36-fb').style.display='block';">C) Reversão.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q36-correta').style.background='#22c55e'; document.getElementById('q36-correta').style.color='#fff'; document.getElementById('q36-fb').style.display='block';">D) Aproveitamento.</button>
+            </div>
+            <div id="q36-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Readaptação (Art. 27) é a investidura em cargo de atribuições e responsabilidades compatíveis com a limitação sofrida.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Incapacidade Total</span>
+            <div class="question-text">Questão 37. No caso da questão anterior, se o servidor em processo de readaptação for julgado totalmente incapaz para qualquer serviço público pela junta médica oficial, o Estatuto prevê que ele será:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q37-correta').style.background='#22c55e'; document.getElementById('q37-correta').style.color='#fff'; document.getElementById('q37-fb').style.display='block';">A) Exonerado sem vencimentos.</button>
+                <button id="q37-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q37-fb').style.display='block';">B) Aposentado.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q37-correta').style.background='#22c55e'; document.getElementById('q37-correta').style.color='#fff'; document.getElementById('q37-fb').style.display='block';">C) Colocado em disponibilidade.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q37-correta').style.background='#22c55e'; document.getElementById('q37-correta').style.color='#fff'; document.getElementById('q37-fb').style.display='block';">D) Demitido por justa causa.</button>
+            </div>
+            <div id="q37-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Se julgado incapaz para o serviço público, o readaptando será aposentado (Art. 27, § 1º).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Retorno de Aposentado</span>
+            <div class="question-text">Questão 38. Um servidor que estava aposentado por invalidez consegue provar em nova perícia que os motivos de sua incapacidade cessaram. Ele deseja voltar à ativa. O nome desse retorno é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q38-correta').style.background='#22c55e'; document.getElementById('q38-correta').style.color='#fff'; document.getElementById('q38-fb').style.display='block';">A) Reintegração.</button>
+                <button id="q38-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q38-fb').style.display='block';">B) Reversão.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q38-correta').style.background='#22c55e'; document.getElementById('q38-correta').style.color='#fff'; document.getElementById('q38-fb').style.display='block';">C) Readaptação.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q38-correta').style.background='#22c55e'; document.getElementById('q38-correta').style.color='#fff'; document.getElementById('q38-fb').style.display='block';">D) Recondução.</button>
+            </div>
+            <div id="q38-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Reversão é o retorno à atividade de servidor aposentado (Art. 28). Lembre-se: V de "Vovô" Voltou.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Demissão Invalidada</span>
+            <div class="question-text">Questão 39. Antônio foi demitido injustamente. Após anos na justiça, uma decisão judicial transitada em julgado anula sua demissão. Ele deve retornar ao cargo com direito ao ressarcimento de todas as vantagens. Este instituto é a:</div>
+            <div class="options-container">
+                <button id="q39-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q39-fb').style.display='block';">A) Reintegração.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q39-correta').style.background='#22c55e'; document.getElementById('q39-correta').style.color='#fff'; document.getElementById('q39-fb').style.display='block';">B) Reversão.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q39-correta').style.background='#22c55e'; document.getElementById('q39-correta').style.color='#fff'; document.getElementById('q39-fb').style.display='block';">C) Recondução.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q39-correta').style.background='#22c55e'; document.getElementById('q39-correta').style.color='#fff'; document.getElementById('q39-fb').style.display='block';">D) Nomeação Originária.</button>
+            </div>
+            <div id="q39-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Reintegração é o retorno do servidor estável ao cargo anteriormente ocupado quando a demissão é invalidada administrativamente ou judicialmente (Art. 31).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Recondução</span>
+            <div class="question-text">Questão 40. Um servidor estável de Eusébio decide prestar outro concurso. Ele é reprovado no estágio probatório do novo cargo em outra cidade e decide voltar ao seu cargo anterior em Eusébio. O nome desse instituto é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q40-correta').style.background='#22c55e'; document.getElementById('q40-correta').style.color='#fff'; document.getElementById('q40-fb').style.display='block';">A) Reintegração.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q40-correta').style.background='#22c55e'; document.getElementById('q40-correta').style.color='#fff'; document.getElementById('q40-fb').style.display='block';">B) Reversão.</button>
+                <button id="q40-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q40-fb').style.display='block';">C) Recondução.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q40-correta').style.background='#22c55e'; document.getElementById('q40-correta').style.color='#fff'; document.getElementById('q40-fb').style.display='block';">D) Remoção.</button>
+            </div>
+            <div id="q40-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> Recondução é o retorno do servidor estável ao cargo anteriormente ocupado em decorrência de inabilitação em estágio probatório de outro cargo (Art. 33).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Vencimentos</span>
+            <div class="question-text">Questão 41. Uma servidora recebe uma verba de caráter indenizatório para realizar uma viagem de serviço. De acordo com o Art. 55 do Estatuto, essa vantagem financeira:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q41-correta').style.background='#22c55e'; document.getElementById('q41-correta').style.color='#fff'; document.getElementById('q41-fb').style.display='block';">A) Incorpora-se ao vencimento após 5 anos.</button>
+                <button id="q41-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q41-fb').style.display='block';">B) Não se incorpora ao vencimento ou provento para qualquer efeito.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q41-correta').style.background='#22c55e'; document.getElementById('q41-correta').style.color='#fff'; document.getElementById('q41-fb').style.display='block';">C) Serve de base para o cálculo da aposentadoria.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q41-correta').style.background='#22c55e'; document.getElementById('q41-correta').style.color='#fff'; document.getElementById('q41-fb').style.display='block';">D) Deve ser devolvida integralmente no final do ano.</button>
+            </div>
+            <div id="q41-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> As indenizações não se incorporam ao vencimento ou provento.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Horas Extras</span>
+            <div class="question-text">Questão 42. Um servidor municipal de Eusébio precisou estender seu turno para cobrir um evento de emergência. Segundo o Estatuto, o serviço extraordinário (hora extra) será remunerado com acréscimo de quanto em relação à hora normal?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q42-correta').style.background='#22c55e'; document.getElementById('q42-correta').style.color='#fff'; document.getElementById('q42-fb').style.display='block';">A) 25%.</button>
+                <button id="q42-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q42-fb').style.display='block';">B) 50%.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q42-correta').style.background='#22c55e'; document.getElementById('q42-correta').style.color='#fff'; document.getElementById('q42-fb').style.display='block';">C) 75%.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q42-correta').style.background='#22c55e'; document.getElementById('q42-correta').style.color='#fff'; document.getElementById('q42-fb').style.display='block';">D) 100%.</button>
+            </div>
+            <div id="q42-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A remuneração por hora extra é acrescida de 50% em relação à hora normal (Art. 82).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Processo Disciplinar</span>
+            <div class="question-text">Questão 43. Uma sindicância foi aberta para apurar uma denúncia contra um servidor. Se os fatos forem graves, a autoridade deve instaurar um Processo Administrativo Disciplinar (PAD). Qual o prazo legal de conclusão do PAD em Eusébio?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q43-correta').style.background='#22c55e'; document.getElementById('q43-correta').style.color='#fff'; document.getElementById('q43-fb').style.display='block';">A) 30 dias.</button>
+                <button id="q43-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q43-fb').style.display='block';">B) 60 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q43-correta').style.background='#22c55e'; document.getElementById('q43-correta').style.color='#fff'; document.getElementById('q43-fb').style.display='block';">C) 90 dias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q43-correta').style.background='#22c55e'; document.getElementById('q43-correta').style.color='#fff'; document.getElementById('q43-fb').style.display='block';">D) 120 dias.</button>
+            </div>
+            <div id="q43-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O prazo para a conclusão do processo administrativo disciplinar não excederá 60 dias, admitida a sua prorrogação por igual período (Art. 172).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Ética e Proibição</span>
+            <div class="question-text">Questão 44. Um servidor municipal de Eusébio está sendo acusado de facilitar a entrada de familiares na frente de outros cidadãos em um posto de saúde. De acordo com o Art. 138 do Estatuto, qual conduta ética está sendo violada?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q44-correta').style.background='#22c55e'; document.getElementById('q44-correta').style.color='#fff'; document.getElementById('q44-fb').style.display='block';">A) Inassiduidade habitual.</button>
+                <button id="q44-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q44-fb').style.display='block';">B) Valer-se do cargo para lograr proveito pessoal ou de outrem.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q44-correta').style.background='#22c55e'; document.getElementById('q44-correta').style.color='#fff'; document.getElementById('q44-fb').style.display='block';">C) Praticar ato de insubordinação grave.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q44-correta').style.background='#22c55e'; document.getElementById('q44-correta').style.color='#fff'; document.getElementById('q44-fb').style.display='block';">D) Aceitar comissão fora do país.</button>
+            </div>
+            <div id="q44-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> É proibido ao servidor valer-se do cargo para obter proveito pessoal ou para terceiros, em detrimento da dignidade da função (Art. 138, IX).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Responsabilidade Civil</span>
+            <div class="question-text">Questão 45. Durante o exercício de suas funções, um vigia municipal causa, acidentalmente (por negligência), um dano ao veículo de um visitante. De acordo com o Art. 143 do Estatuto, como o servidor responderá perante a prefeitura?</div>
+            <div class="options-container">
+                <button id="q45-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q45-fb').style.display='block';">A) Por meio de ação regressiva.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q45-correta').style.background='#22c55e'; document.getElementById('q45-correta').style.color='#fff'; document.getElementById('q45-fb').style.display='block';">B) Não responderá, pois o Estado assume o prejuízo total.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q45-correta').style.background='#22c55e'; document.getElementById('q45-correta').style.color='#fff'; document.getElementById('q45-fb').style.display='block';">C) Apenas com advertência verbal.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q45-correta').style.background='#22c55e'; document.getElementById('q45-correta').style.color='#fff'; document.getElementById('q45-fb').style.display='block';">D) Com suspensão imediata de 90 dias.</button>
+            </div>
+            <div id="q45-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA A.</span> Tratando-se de dano causado a terceiros, o servidor responderá perante a Fazenda Municipal em ação regressiva (Art. 143).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Composição de Comissões</span>
+            <div class="question-text">Questão 46. Um processo administrativo é aberto contra o servidor Pedro. Para garantir a imparcialidade, quem NÃO poderá participar da comissão de sindicância ou de inquérito, de acordo com o Art. 169 do Estatuto?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q46-correta').style.background='#22c55e'; document.getElementById('q46-correta').style.color='#fff'; document.getElementById('q46-fb').style.display='block';">A) Colegas de setor com mais tempo de serviço.</button>
+                <button id="q46-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q46-fb').style.display='block';">B) Cônjuge ou parente até o terceiro grau.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q46-correta').style.background='#22c55e'; document.getElementById('q46-correta').style.color='#fff'; document.getElementById('q46-fb').style.display='block';">C) Servidores de outras secretarias.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q46-correta').style.background='#22c55e'; document.getElementById('q46-correta').style.color='#fff'; document.getElementById('q46-fb').style.display='block';">D) O procurador geral do município.</button>
+            </div>
+            <div id="q46-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Não poderá participar de comissão o cônjuge ou parente do acusado, consanguíneo ou afim, em linha reta ou colateral, até o terceiro grau (Art. 169).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Zelo Patrimonial</span>
+            <div class="question-text">Questão 47. Durante uma inspeção rotineira nas dependências de um prédio público em Eusébio, o vigia percebe dois funcionários em situação de namoro e intimidade em um local reservado. De acordo com as proibições literais do Art. 138 do Estatuto, essa conduta é:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q47-correta').style.background='#22c55e'; document.getElementById('q47-correta').style.color='#fff'; document.getElementById('q47-fb').style.display='block';">A) Permitida após as 18 horas.</button>
+                <button id="q47-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q47-fb').style.display='block';">B) Proibida expressamente pelo inciso XX.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q47-correta').style.background='#22c55e'; document.getElementById('q47-correta').style.color='#fff'; document.getElementById('q47-fb').style.display='block';">C) Irrelevante para o estatuto do servidor.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q47-correta').style.background='#22c55e'; document.getElementById('q47-correta').style.color='#fff'; document.getElementById('q47-fb').style.display='block';">D) Permitida em áreas comuns.</button>
+            </div>
+            <div id="q47-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> O Estatuto proíbe praticar atos que demonstrem namoro ou relação íntima nas dependências de prédios públicos (Art. 138, XX).
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Prevenção de Explosões</span>
+            <div class="question-text">Questão 48. Um guarda patrimonial sente um forte odor de gás ao entrar na cozinha de uma escola municipal em Eusébio. Recordando-se das normas de segurança, ele deve evitar uma ação específica para não causar uma ignição. Qual é essa ação?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q48-correta').style.background='#22c55e'; document.getElementById('q48-correta').style.color='#fff'; document.getElementById('q48-fb').style.display='block';">A) Abrir portas e janelas.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q48-correta').style.background='#22c55e'; document.getElementById('q48-correta').style.color='#fff'; document.getElementById('q48-fb').style.display='block';">B) Evacuar o prédio.</button>
+                <button id="q48-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q48-fb').style.display='block';">C) Ligar as lâmpadas ou exaustores elétricos.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q48-correta').style.background='#22c55e'; document.getElementById('q48-correta').style.color='#fff'; document.getElementById('q48-fb').style.display='block';">D) Fechar a válvula do gás se for seguro.</button>
+            </div>
+            <div id="q48-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA C.</span> Acionar dispositivos elétricos gera faíscas que servem como fonte de ignição para o gás acumulado.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Hierarquia de Medidas</span>
+            <div class="question-text">Questão 49. Na inspeção de uma oficina da prefeitura, nota-se alto ruído. O encarregado decide entregar protetores auriculares imediatamente. De acordo com a NR-06, essa medida foi:</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q49-correta').style.background='#22c55e'; document.getElementById('q49-correta').style.color='#fff'; document.getElementById('q49-fb').style.display='block';">A) Correta, pois o EPI é a prioridade número 1.</button>
+                <button id="q49-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q49-fb').style.display='block';">B) Incompleta, pois o EPI deve ser a última medida, priorizando medidas coletivas.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q49-correta').style.background='#22c55e'; document.getElementById('q49-correta').style.color='#fff'; document.getElementById('q49-fb').style.display='block';">C) Correta, independentemente da análise da fonte do ruído.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q49-correta').style.background='#22c55e'; document.getElementById('q49-correta').style.color='#fff'; document.getElementById('q49-fb').style.display='block';">D) Desnecessária, pois ruído não é risco físico.</button>
+            </div>
+            <div id="q49-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> A hierarquia de prevenção exige que se tente primeiro o controle na fonte ou no ambiente (EPC) antes de usar o EPI.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <span class="tag">Sinais Vitais</span>
+            <div class="question-text">Questão 50. Um vigia encontra um servidor desmaiado no corredor do Paço Municipal. Ao realizar o protocolo de primeiros socorros, ele deve verificar os sinais vitais que indicam existência de vida. Quais são estes sinais citados no material técnico?</div>
+            <div class="options-container">
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q50-correta').style.background='#22c55e'; document.getElementById('q50-correta').style.color='#fff'; document.getElementById('q50-fb').style.display='block';">A) Força muscular e audição.</button>
+                <button id="q50-correta" class="option-btn" onclick="this.style.background='#22c55e'; this.style.color='#fff'; document.getElementById('q50-fb').style.display='block';">B) Respiração, temperatura, pulso e pressão arterial.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q50-correta').style.background='#22c55e'; document.getElementById('q50-correta').style.color='#fff'; document.getElementById('q50-fb').style.display='block';">C) Nível de escolaridade e reflexos táteis.</button>
+                <button class="option-btn" onclick="this.style.background='#ef4444'; this.style.color='#fff'; document.getElementById('q50-correta').style.background='#22c55e'; document.getElementById('q50-correta').style.color='#fff'; document.getElementById('q50-fb').style.display='block';">D) Apenas o batimento cardíaco.</button>
+            </div>
+            <div id="q50-fb" class="feedback">
+                <span class="feedback-title">GABARITO LETRA B.</span> Os sinais vitais são: respiração, temperatura, pulso e pressão arterial.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>🏆 FIM DO SIMULADO DE ELITE - EUSÉBIO!</p>
+    </div>
+</div>
+
+</body>
+</html>
